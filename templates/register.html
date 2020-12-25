@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{%block title%}registeration{%endblock%}
+
+{%block body%}
+<form action="{{ url_for('login') }}" method="POST">
+    <p>user name: </p>
+    <input type="text" name="name" placeholder="Enter username">
+    {{namemessage}}
+    <p>e-mail: </p>
+    <input type="text" name="email" placeholder="Enter your email">
+    <p>phone number: </p>
+    <input type="text" name="phone" placeholder="Enter your phone number">
+    <p>passward: </p>
+    <input type="password" name="pass" placeholder="Enter you password">
+    <p>Confirm your passward: </p>
+    <input type="password" name="conpass" placeholder="Confirm your password">
+    {{passmessage}}
+    <br><br><button>Register</button>
+</form>
+{%endblock%}

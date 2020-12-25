@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{%block title%}registeration{%endblock%}
+
+{%block body%}
+<h1>{{messege}}</h1>
+<p>You can: </p><a href="{{url_for('login')}}">login</a>
+<p>or </p><a href="{{url_for('register')}}">register</a>
+{%endblock%}

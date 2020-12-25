@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{%block title%}login{%endblock%}
+
+{%block body%}
+<form action="{{ url_for('search') }}" method="POST">
+    <p>user name: </p>
+    <input type="text" name="username" placeholder="Enter username">
+    <p>passward: </p>
+    <input type="password" name="password" placeholder="Enter you passward">
+    {{message}}
+    <br><br> <button>login</button> <p>or</p> 
+    <a href="{{ url_for('register') }}">register</a>
+</form>
+{%endblock%}

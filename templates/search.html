@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %} search {%endblock%}
+
+{% block body %}
+<form action="{{ url_for('list') }}" method="POST">
+    <p> search a book </p>
+    <input type="search" name="search" placeholder="search">
+    <button>search</button>
+</form>
+<h5>{{error}}</h5>
+<div>
+    {% for book in books: %}
+    <ul>
+    <!-- <li> id of book: {{book.isbn}} </li> -->
+    <li><a href="{{url_for('details', book_id=book.isbn)}}"> {{book.title}} </a></li>
+    <!-- <li> author of book: {{book.author}} </li>
+    <li> year of puplish: {{book.year}} </li> -->
+    </ul>
+    {%endfor%}
+</div>
+{%endblock%}
